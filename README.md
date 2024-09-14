@@ -4,4 +4,5 @@
 
 ## 项目启动流程
 
-yarn install # 下载依赖 yarn start # 启动项目
+yarn install # 下载依赖 
+yarn start # 启动项目
