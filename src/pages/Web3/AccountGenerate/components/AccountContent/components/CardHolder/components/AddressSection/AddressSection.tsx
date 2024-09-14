@@ -7,6 +7,7 @@ import {
 import { Button, Form, Input, message, QRCode } from 'antd';
 
 import download from 'downloadjs';
+import { useState } from 'react';
 import styles from './AddressSection.less';
 interface Props {
   publicAddress: string;
@@ -14,12 +15,21 @@ interface Props {
 }
 const AddressSection: React.FC<Props> = (props) => {
   const { publicAddress, privateKey } = props;
-
+  // 地址
+  const [publicAddressContent, setPublicAddressContent] =
+    useState<string>(publicAddress);
+  // 私钥
+  const [privateKeyContent, setPrivateKeyContent] =
+    useState<string>(privateKey);
   // 将地址和私钥作为文件下载
   const downloadAddress = () => {
-    const fileName = 'VET_' + publicAddress + '.txt';
+    const fileName = 'VET_' + publicAddressContent + '.txt';
     const content =
-      'VET Address: ' + publicAddress + '\n' + 'Private key: ' + privateKey;
+      'VET Address: ' +
+      publicAddressContent +
+      '\n' +
+      'Private key: ' +
+      privateKeyContent;
     download(content, fileName, 'application/json');
   };
 
@@ -34,12 +44,15 @@ const AddressSection: React.FC<Props> = (props) => {
           <Form.Item label={<EnvironmentOutlined />} name="publicAddress">
             <div className={styles['custom-formItem']}>
               <Input
-                value={publicAddress}
+                value={publicAddressContent}
+                onChange={(e) => {
+                  setPublicAddressContent(e.target.value);
+                }}
                 id="publicAddress"
                 addonAfter={
                   <CopyOutlined
                     onClick={() => {
-                      copyFunction('publicAddress');
+                      copyFunction(publicAddressContent);
                       message.success('复制成功');
                     }}
                   />
@@ -51,12 +64,15 @@ const AddressSection: React.FC<Props> = (props) => {
           <Form.Item label={<KeyOutlined />} name="privateAddress">
             <div className={styles['custom-formItem']}>
               <Input
-                value={privateKey}
+                value={privateKeyContent}
+                onChange={(e) => {
+                  setPrivateKeyContent(e.target.value);
+                }}
                 id="privateAddress"
                 addonAfter={
                   <CopyOutlined
                     onClick={() => {
-                      copyFunction('privateAddress');
+                      copyFunction(privateKeyContent);
                       message.success('复制成功');
                     }}
                   />

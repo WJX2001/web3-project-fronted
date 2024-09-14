@@ -1,4 +1,3 @@
-
 // TODO: 工具类函数
 // 生成UUID
 export const uuid = () => {
@@ -10,9 +9,6 @@ export const uuid = () => {
 };
 
 // 使用拷贝方法
-export const copyFunction = (domId: string) => {
-  const copyText = document.getElementById(domId) as HTMLInputElement;
-  copyText.select();
-  navigator.clipboard.writeText(copyText.value);
-  
+export const copyFunction = (content: string) => {
+  navigator.clipboard.writeText(content);
 };
