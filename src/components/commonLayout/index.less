@@ -1,0 +1,49 @@
+.common-layout-container {
+  height: calc(100vh - 80px); // 136px 80px
+  position: relative;
+
+  .common-splitPane {
+    height: 100%;
+    background: #fff;
+
+    div[data-type='Resizer'] {
+      position: relative;
+      background: #fff;
+      &:after {
+        content: " ";
+        position: absolute;
+        width: 6px;
+        height: 24px;
+        top: 50%;
+        margin-top: -12px;
+        // right: -6px;
+        border-left: 2px dashed #333;
+        border-right: 2px dashed #333;
+        z-index: 10;
+      }
+    }
+  }
+  .left-wrapper {
+    height: 100%;
+    // &:after {
+    //   content: " ";
+    //   position: absolute;
+    //   width: 4px;
+    //   height: 16px;
+    //   top: 50%;
+    //   margin-top: -8px;
+    //   right: -6px;
+    //   border-left: 1px solid #d1d3d8;
+    //   border-right: 1px solid #d1d3d8;
+    //   z-index: 1;
+    // }
+  }
+
+  .right-wrapper {
+    height: 100%;
+  }
+
+  .right-wrapper {
+    height: 100%;
+  }
+}

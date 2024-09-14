@@ -1,0 +1,26 @@
+.common-codemirror-container {
+  height: 100%;
+
+  :global .react-codemirror2 {
+    height: 100%;
+  }
+
+  :global .CodeMirror {
+    height: 100%;
+    // background: #F4F6F9 !important;
+    padding-right: 10px;
+    .CodeMirror-gutters {
+      z-index:2 !important;
+      background:#DFE1E6 !important;
+    }
+    .CodeMirror-linenumber {
+      color:#333 !important
+    }
+    .CodeMirror-placeholder {
+      color:#ccc !important;
+    }
+    .cm-bracket {
+      color: #db1882 !important;
+    }
+  }
+}
