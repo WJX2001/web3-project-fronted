@@ -1,6 +1,6 @@
 import { Button, Card, Col, Collapse } from 'antd';
 import { useState } from 'react';
-import AddressSection from './components/AddressSection';
+import AddressSection from './components/AddressSection/AddressSection';
 import styles from './index.less';
 const { Panel } = Collapse;
 
