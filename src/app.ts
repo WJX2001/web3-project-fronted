@@ -53,7 +53,7 @@ export const request: RequestConfig = {
     errorHandler: (error, opt) => {
       // 特殊处理，取消接口 === 登录超时
       message.error(
-        error?.message === 'canceled' ? '登录超时' : error?.message,
+        error?.message,
       );
       // console.log(error, 'errorHandler');
       console.log(opt);
@@ -66,35 +66,10 @@ export const request: RequestConfig = {
   },
 
   // TODO: 请求阶段的拦截器
-  requestInterceptors: [
-    (response: any) => {
-      return { ...response, signal: controller.signal };
-    },
-  ],
+  // requestInterceptors: [
+  //   (response: any) => {
+  //     return { ...response, signal: controller.signal };
+  //   },
+  // ],
 
-  // TODO: 响应阶段的拦截器
-  responseInterceptors: [
-    // (response) => {
-    //   // @ts-ignore
-    //   const { data }: { code: string; message: string; data: any } = response;
-    //   if (
-    //     data.code === 'SESSION_TIME_OUT' ||
-    //     data.code === 'UNAUTHORIZED' ||
-    //     (typeof data === 'string' && data.includes('top.postMessage'))
-    //   ) {
-    //     if (timeOutFlag) {
-    //       controller.abort('登录超时');
-    //       // history.push('/login');
-    //       // @ts-ignore
-    //       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    //       window.top?.loginOut && window.top?.loginOut();
-    //       return response;
-    //     }
-    //     timeOutFlag = true;
-    //   } else {
-    //     message.error(data?.message || '后端服务异常！');
-    //   }
-    //   return response;
-    // },
-  ],
 };

@@ -32,3 +32,28 @@ export const deleteDept = async(id: number) => {
   )
   return {success}
 }
+
+export const registerDemo = async (param: any) => {
+  const {success,data} = await request (
+    `http://localhost:8080/user/signup`,
+    // `${PATH_PREFIX}/user/signup`,
+    {
+      method: 'POST',
+      data: param
+    }
+  )
+  return {success,data}
+}
+
+export const login = async (param: any) => {
+  const {success,data} = await request (
+    `http://localhost:8080/user/login`,
+    // `${PATH_PREFIX}/user/signup`,
+    {
+      method: 'POST',
+      withCredentials: true,
+      data: param
+    }
+  )
+  return {success,data}
+}

@@ -1,6 +1,7 @@
 import { defineConfig } from '@umijs/max';
 import proxy from './proxy';
 import routes from './routes';
+
 export default defineConfig({
   antd: {},
   access: {},
@@ -11,6 +12,7 @@ export default defineConfig({
     title: '@umijs/max',
   },
   routes,
+  // proxy.proxy,
   proxy,
   npmClient: 'yarn',
   define: {
