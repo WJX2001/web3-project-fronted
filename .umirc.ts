@@ -21,6 +21,7 @@ export default defineConfig({
       ALCHEMY_MAINNET_URL: process.env.ALCHEMY_MAINNET_URL,
       ALCHEMY_SEPOLIA_URL: process.env.ALCHEMY_SEPOLIA_URL,
       SEPOLIA_API_KEY: process.env.SEPOLIA_API_KEY,
+      SEPOLIA_PUBLIC_KEY: process.env.SEPOLIA_PUBLIC_KEY
     },
   },
 });
