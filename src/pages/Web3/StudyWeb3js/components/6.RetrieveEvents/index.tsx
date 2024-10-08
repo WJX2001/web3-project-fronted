@@ -24,6 +24,7 @@ const RetrieveEvents = () => {
     const block = await provider.getBlockNumber();
     console.log(`当前区块高度: ${block}`);
     console.log(`打印事件详情:`);
+    // 获取过去10个区块内的Transfer事件，并打印出一个
     const transferEvents: any = await contract.queryFilter(
       'Transfer',
       block - 10,

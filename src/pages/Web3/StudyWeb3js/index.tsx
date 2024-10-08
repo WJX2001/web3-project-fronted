@@ -5,11 +5,13 @@ import SendETH from './components/3.SendETH'
 import ContractInteraction from './components/4.ContractInteraction'
 import DeployContract from './components/5.DeployContract'
 import RetrieveEvents from './components/6.RetrieveEvents'
+import MonitorContract from './components/7.MonitorContractEvents'
+import EventFiltering from './components/8.EventFiltering'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <RetrieveEvents />
+      <EventFiltering />
     </div>
   )
 }
