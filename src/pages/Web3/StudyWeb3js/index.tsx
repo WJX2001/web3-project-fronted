@@ -7,11 +7,12 @@ import DeployContract from './components/5.DeployContract'
 import RetrieveEvents from './components/6.RetrieveEvents'
 import MonitorContract from './components/7.MonitorContractEvents'
 import EventFiltering from './components/8.EventFiltering'
+import BigIntComp from './components/9.BigInt'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <EventFiltering />
+      <BigIntComp />
     </div>
   )
 }
