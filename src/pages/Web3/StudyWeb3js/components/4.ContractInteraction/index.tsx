@@ -11,8 +11,7 @@ const ContractInteraction = () => {
   );
 
   // 利用私钥和provider创建wallet对象(建议用自己的钱包私钥)
-  const privateKey =
-    '0f03a73988c990c2333bbbcd99d442377fedbe48083a8a9c4426ace223c33e5d';
+  const privateKey = process.env.METAMASK_PRIVATE_KEY;
   const wallet = new ethers.Wallet(privateKey, provider);
 
   // 创建可写 WETH 合约变量
@@ -43,10 +42,10 @@ const ContractInteraction = () => {
 
   // 调用WETH的 deposit()函数，将0.001ETH 转换为 0.001 WETH
   const handleCoverToWETH = async () => {
-    console.log('\n2. 调用desposit()函数，存入0.001 ETH');
+    console.log('\n2. 调用desposit()函数，存入0.0001 ETH');
     // 发起交易
     const tx = await contractWETH.deposit({
-      value: ethers.parseEther('0.001'),
+      value: ethers.parseEther('0.0001'),
     });
     // 等待交易上链
     await tx.wait();
@@ -62,7 +61,7 @@ const ContractInteraction = () => {
     // 发起交易
     const tx2 = await contractWETH.transfer(
       'vitalik.eth',
-      ethers.parseEther('0.001'),
+      ethers.parseEther('0.0001'),
     );
     // 等待交易上链
     await tx2.wait();
