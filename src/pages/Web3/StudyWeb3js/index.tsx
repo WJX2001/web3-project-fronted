@@ -8,11 +8,12 @@ import RetrieveEvents from './components/6.RetrieveEvents'
 import MonitorContract from './components/7.MonitorContractEvents'
 import EventFiltering from './components/8.EventFiltering'
 import BigIntComp from './components/9.BigInt'
+import StaticCall from './components/10.StaticCall'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <BigIntComp />
+      <StaticCall />
     </div>
   )
 }
