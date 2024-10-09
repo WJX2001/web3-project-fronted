@@ -12,11 +12,12 @@ import StaticCall from './components/10.StaticCall'
 import MonitorERC721 from './components/11.MonitorERC721'
 import CallData from './components/12.calldata'
 import HDWallet from './components/13.HD钱包'
+import BatchTransfer from './components/14.批量转账'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <HDWallet />
+      <BatchTransfer />
     </div>
   )
 }
