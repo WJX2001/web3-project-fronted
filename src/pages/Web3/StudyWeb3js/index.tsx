@@ -9,11 +9,12 @@ import MonitorContract from './components/7.MonitorContractEvents'
 import EventFiltering from './components/8.EventFiltering'
 import BigIntComp from './components/9.BigInt'
 import StaticCall from './components/10.StaticCall'
+import MonitorERC721 from './components/11.MonitorERC721'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <StaticCall />
+      <MonitorERC721 />
     </div>
   )
 }
