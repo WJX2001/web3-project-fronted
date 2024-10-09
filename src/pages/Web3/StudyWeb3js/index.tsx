@@ -10,11 +10,13 @@ import EventFiltering from './components/8.EventFiltering'
 import BigIntComp from './components/9.BigInt'
 import StaticCall from './components/10.StaticCall'
 import MonitorERC721 from './components/11.MonitorERC721'
+import CallData from './components/12.calldata'
+import HDWallet from './components/13.HD钱包'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <MonitorERC721 />
+      <HDWallet />
     </div>
   )
 }
