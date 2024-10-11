@@ -17,11 +17,13 @@ import BatchCollection from './components/15.批量归集'
 import ListenMemopool from './components/16.监听mempool脚本'
 import DecodeComp from './components/17.DecodeComp'
 import BeautifulNumGenerator from './components/18.BeautifulNumGenerator'
+import ConnectMetaMast from './components/20.链接钱包'
+import MetaMaskSignature from './components/21.MetaMask签名授权'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <BeautifulNumGenerator />
+      <MetaMaskSignature />
     </div>
   )
 }
