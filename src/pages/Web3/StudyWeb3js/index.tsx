@@ -16,11 +16,12 @@ import BatchTransfer from './components/14.批量转账'
 import BatchCollection from './components/15.批量归集'
 import ListenMemopool from './components/16.监听mempool脚本'
 import DecodeComp from './components/17.DecodeComp'
+import BeautifulNumGenerator from './components/18.BeautifulNumGenerator'
 
 const StudyWeb3js = () => {
   return (
     <div>
-      <DecodeComp />
+      <BeautifulNumGenerator />
     </div>
   )
 }
